@@ -3,7 +3,7 @@
 from sys import argv
 import yaml
 
-def main(args):
+def compiler(args):
     # Project path
     _project_path = args[1] # Note => args = sys.argv
     _config_file = open(f"{_project_path}/keybash.yaml", 'r')
@@ -18,4 +18,4 @@ def main(args):
     for key, value in _config_file_contents["Files"].items():
         print(f"{key}: {value}")
 
-main(argv)
+compiler(argv)
